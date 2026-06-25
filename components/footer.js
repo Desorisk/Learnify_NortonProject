@@ -1,20 +1,10 @@
 const show_Footer = `
 <footer class="site-footer">
-      <div
-        class="skyline"
-        role="img"
-        aria-label="Cambodia temple skyline at dusk"
-      ></div>
-
       <div class="footer-top">
         <div class="footer-col">
         <div class="footer-logo"><img src="../public/Leanify logo white bg.png" alt="logo"><h4>Learnify Education</h4></div>
           <div class="access-box">
             <div class="footer-search">
-              <svg viewBox="0 0 24 24">
-                <circle cx="10" cy="10" r="7" />
-                <path d="m21 21-4.3-4.3" />
-              </svg>
               <input type="text" placeholder="Search courses" />
             </div>
             <button class="footer-login-btn">Log in</button>
@@ -60,13 +50,13 @@ const show_Footer = `
 
         <div class="footer-col">
           <h4>Contact</h4>
-          <p style="color: #ffffff; font-weight: 600; margin-bottom: 2px">
-            Edura
+          <p style="color: #1a1a2e; font-weight: 600; margin-bottom: 2px">
+            Leanrify
           </p>
           <p>Company number: 559063-2377</p>
           <p
             style="
-              color: #ffffff;
+              color: #1a1a2e;
               font-weight: 600;
               margin-top: 12px;
               margin-bottom: 2px;
@@ -82,34 +72,6 @@ const show_Footer = `
         <p class="legal-line">
           Part of Learnify Group, supporting learners across Southeast Asia.
         </p>
-        <p class="legal-line">hello@Learnify.edu.kh, 023 988 300</p>
-
-        <div class="badges-row">
-          <div class="badge-group">
-            <div class="badge-icon">
-              <svg viewBox="0 0 24 24">
-                <path d="M12 2 4 6v6c0 5 3.5 8.5 8 10 4.5-1.5 8-5 8-10V6Z" />
-                <path d="m9 12 2 2 4-4" />
-              </svg>
-            </div>
-            <div class="badge-text">Trusted<br />platform</div>
-          </div>
-          <div class="badge-group">
-            <div class="badge-icon">
-              <svg viewBox="0 0 24 24">
-                <rect x="3" y="5" width="18" height="14" rx="2" />
-                <path d="M3 10h18" />
-                <path d="M7 15h4" />
-              </svg>
-            </div>
-            <div class="badge-text">PCI DSS<br />compliant</div>
-          </div>
-          <div class="payment-row">
-            <div class="payment-pill">ABA PAY</div>
-            <div class="payment-pill">VISA</div>
-            <div class="payment-pill">Mastercard</div>
-          </div>
-        </div>
 
         <p class="legal-line copyright">
           © 2020-2026 Edura. All rights reserved.
