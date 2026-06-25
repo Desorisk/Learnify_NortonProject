@@ -8,7 +8,7 @@ const show_Footer = `
 
       <div class="footer-top">
         <div class="footer-col">
-          <h4>Edura</h4>
+        <div class="footer-logo"><img src="../public/Leanify logo white bg.png" alt="logo"><h4>Learnify Education</h4></div>
           <div class="access-box">
             <div class="footer-search">
               <svg viewBox="0 0 24 24">
@@ -24,7 +24,7 @@ const show_Footer = `
             across Cambodia and beyond.
           </p>
           <div class="social-row">
-            <span>Follow Edura</span>
+            <span>Follow Learnify</span>
             <div class="social-icon" aria-label="Facebook">
               <svg viewBox="0 0 24 24">
                 <path
@@ -52,10 +52,10 @@ const show_Footer = `
         <div class="footer-col">
           <h4>Information</h4>
           <a href="#">FAQs</a>
-          <a href="#">About Edura</a>
-          <a href="#">Edura legal</a>
+          <a href="#">About Learnify</a>
+          <a href="#">Learnify legal</a>
           <a href="#" style="margin-top: 16px">023 988 300</a>
-          <a href="#">hello@edura.edu.kh</a>
+          <a href="#">hello@Leanify.edu.kh</a>
         </div>
 
         <div class="footer-col">
@@ -80,9 +80,9 @@ const show_Footer = `
 
       <div class="footer-bottom">
         <p class="legal-line">
-          Part of Edura Group, supporting learners across Southeast Asia.
+          Part of Learnify Group, supporting learners across Southeast Asia.
         </p>
-        <p class="legal-line">hello@edura.edu.kh, 023 988 300</p>
+        <p class="legal-line">hello@Learnify.edu.kh, 023 988 300</p>
 
         <div class="badges-row">
           <div class="badge-group">

@@ -47,9 +47,9 @@
     stroke-linejoin: round;
   }
 
-  .logo-icon svg {
-    width: 18px;
-    height: 18px;
+  .logo-icon img {
+    width: 36px;
+    height: 36px;
     stroke: #0f6e56;
   }
 
