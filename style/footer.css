@@ -1,0 +1,285 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+ 
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background: #f7f7f5;
+  }
+ 
+  svg.icon {
+    display: inline-block;
+    flex-shrink: 0;
+    fill: none;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+ 
+  /* ===== FOOTER WRAPPER ===== */
+  .site-footer {
+    background: #052e26;
+    color: #cfeae1;
+  }
+ 
+  /* ===== CAMBODIA SKYLINE ART ===== */
+  .skyline {
+    display: block;
+    width: 100%;
+    height: 220px;
+    background-image: linear-gradient(180deg, rgba(5,46,38,0.55), rgba(5,46,38,0.92)), url('https://images.unsplash.com/photo-1541429819176-c002777fa174?fm=jpg&q=80&w=2000&auto=format&fit=crop');
+    background-size: cover;
+    background-position: center;
+  }
+ 
+  @media (max-width: 600px) {
+    .skyline {
+      height: 150px;
+    }
+  }
+ 
+  /* ===== TOP ROW: search + login replacing newsletter ===== */
+  .footer-top {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 0 24px 36px;
+    display: grid;
+    grid-template-columns: 1.3fr 1fr 1fr 1.2fr;
+    gap: 32px;
+  }
+ 
+  .footer-col h4 {
+    font-size: 14px;
+    font-weight: 600;
+    color: #ffffff;
+    margin-bottom: 16px;
+    letter-spacing: 0.2px;
+  }
+ 
+  .footer-col a, .footer-col p {
+    display: block;
+    font-size: 13px;
+    color: #a9cfc4;
+    text-decoration: none;
+    margin-bottom: 10px;
+    line-height: 1.5;
+  }
+ 
+  .footer-col a:hover {
+    color: #ffffff;
+  }
+ 
+  /* search + login block */
+  .access-box {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 14px;
+  }
+ 
+  .footer-search {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: #0b4538;
+    border: 1px solid #145e4d;
+    border-radius: 8px;
+    padding: 0 12px;
+    height: 38px;
+    flex: 1;
+    max-width: 230px;
+  }
+ 
+  .footer-search svg {
+    width: 15px;
+    height: 15px;
+    stroke: #7fb8a8;
+    flex-shrink: 0;
+  }
+ 
+  .footer-search input {
+    border: none;
+    background: transparent;
+    outline: none;
+    font-size: 13px;
+    color: #ffffff;
+    width: 100%;
+    height: 100%;
+  }
+ 
+  .footer-search input::placeholder {
+    color: #6fa595;
+  }
+ 
+  .footer-login-btn {
+    height: 38px;
+    padding: 0 18px;
+    font-size: 13px;
+    font-weight: 600;
+    background: #1d9e75;
+    color: #04342c;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    white-space: nowrap;
+    flex-shrink: 0;
+    transition: background 0.15s ease;
+  }
+ 
+  .footer-login-btn:hover {
+    background: #5dcaa5;
+  }
+ 
+  .footer-blurb {
+    font-size: 13px;
+    color: #8cbcae;
+    line-height: 1.6;
+    margin-top: 4px;
+    max-width: 260px;
+  }
+ 
+  .social-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 4px;
+  }
+ 
+  .social-row span {
+    font-size: 13px;
+    font-weight: 600;
+    color: #ffffff;
+    margin-right: 4px;
+  }
+ 
+  .social-icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #0b4538;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+ 
+  .social-icon svg {
+    width: 15px;
+    height: 15px;
+    stroke: #cfeae1;
+  }
+ 
+  /* ===== BOTTOM STRIP ===== */
+  .footer-bottom {
+    border-top: 1px solid #0e4a3c;
+    padding: 24px;
+    text-align: center;
+  }
+ 
+  .footer-bottom .legal-line {
+    font-size: 13px;
+    color: #a9cfc4;
+    margin-bottom: 6px;
+  }
+ 
+  .footer-bottom .legal-line.copyright {
+    font-size: 12px;
+    color: #6fa595;
+    margin-top: 14px;
+    margin-bottom: 0;
+  }
+ 
+  .badges-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 28px;
+    margin-top: 18px;
+    flex-wrap: wrap;
+  }
+ 
+  .badge-group {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+ 
+  .badge-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 6px;
+    background: #0b4538;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+ 
+  .badge-icon svg {
+    width: 17px;
+    height: 17px;
+    stroke: #5dcaa5;
+  }
+ 
+  .badge-text {
+    font-size: 11px;
+    font-weight: 600;
+    color: #cfeae1;
+    text-align: left;
+    line-height: 1.3;
+  }
+ 
+  .payment-row {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+ 
+  .payment-pill {
+    height: 32px;
+    padding: 0 14px;
+    border-radius: 6px;
+    background: #0b4538;
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    font-weight: 700;
+    color: #cfeae1;
+    letter-spacing: 0.3px;
+  }
+ 
+  /* ===== RESPONSIVE ===== */
+  @media (max-width: 900px) {
+    .footer-top {
+      grid-template-columns: 1fr 1fr;
+      gap: 28px 24px;
+    }
+    .badges-row {
+      gap: 20px;
+    }
+  }
+ 
+  @media (max-width: 600px) {
+    .footer-top {
+      grid-template-columns: 1fr;
+      padding: 0 20px 28px;
+    }
+    .access-box {
+      flex-wrap: wrap;
+    }
+    .footer-search {
+      max-width: none;
+      width: 100%;
+    }
+    .footer-login-btn {
+      width: 100%;
+    }
+    .badges-row {
+      flex-direction: column;
+      gap: 16px;
+    }
+    .footer-bottom {
+      padding: 20px 16px;
+    }
+  }
