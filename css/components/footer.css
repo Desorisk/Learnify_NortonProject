@@ -20,7 +20,7 @@
  
   /* ===== FOOTER WRAPPER ===== */
   .site-footer {
-    background: var(--green);
+    background: var(--green-dark);
   }
  
   @media (max-width: 600px) {
@@ -52,14 +52,14 @@
   .footer-col h4 {
     font-size: 14px;
     font-weight: 600;
-    color: var(--text);
+    color: var(--white);
     margin-bottom: 16px;
     letter-spacing: 0.2px;
   }
   .footer-col a, .footer-col p {
     display: block;
     font-size: 13px;
-    color: var(--text);
+    color: var(--white);
     text-decoration: none;
     margin-bottom: 10px;
     line-height: 1.5;
@@ -109,7 +109,7 @@
     padding: 0 18px;
     font-size: 13px;
     font-weight: 600;
-    background: var(--green-dark);
+    background: var(--green);
     color: white;
     border: none;
     border-radius: 8px;
@@ -141,7 +141,7 @@
   .social-row span {
     font-size: 13px;
     font-weight: 600;
-    color: var(--text);
+    color: var(--white);
     margin-right: 4px;
   }
  
@@ -149,7 +149,7 @@
     width: 30px;
     height: 30px;
     border-radius: 20%;
-    background: #0b4538;
+    background: var(--green);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -165,7 +165,7 @@
  
   /* ===== BOTTOM STRIP ===== */
   .footer-bottom {
-    border-top: 1px solid #0e4a3c;
+    border-top: 1px solid white;
     padding: 24px;
     text-align: center;
     background-color: var(--green-dark);

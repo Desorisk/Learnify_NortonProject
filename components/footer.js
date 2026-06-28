@@ -50,13 +50,13 @@ const show_Footer = `
 
         <div class="footer-col">
           <h4>Contact</h4>
-          <p style="color: #1a1a2e; font-weight: 600; margin-bottom: 2px">
+          <p style="color: white; font-weight: 600; margin-bottom: 2px">
             Leanrify
           </p>
           <p>Company number: 559063-2377</p>
           <p
             style="
-              color: #1a1a2e;
+              color: white;
               font-weight: 600;
               margin-top: 12px;
               margin-bottom: 2px;
