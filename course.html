@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edujar — Best courses are waiting to enrich your skill</title>
+    <link rel="stylesheet" href="./style/navigetionBar.css" />
+    <link rel="stylesheet" href="./style/footer.css" />
+    <style>
+        :root {
+            --bg-deep: #d2f4e5;
+            --bg-card: #157a47;
+            --purple: #1a9e5c;
+            --purple-light: #d2f4e5;
+            --pink: #ff6b81;
+            --yellow: #ffd23f;
+            --text-light: #ffffff;
+            --text-muted: #b8aed1;
+            --radius-lg: 28px;
+            --radius-md: 18px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Helvetica, Arial, sans-serif;
+            background: var(--bg-deep);
+            color: var(--text-light);
+            overflow-x: hidden;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* ===== HERO ===== */
+        .hero {
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 40px;
+            align-items: center;
+            padding: 30px 24px 60px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 52px;
+            line-height: 1.12;
+            font-weight: 800;
+        }
+
+        .plus-row {
+            display: inline-flex;
+            gap: 6px;
+            margin-left: 10px;
+            vertical-align: middle;
+        }
+
+        .plus {
+            color: var(--pink);
+            font-size: 30px;
+            font-weight: 300;
+        }
+
+        .hero p {
+            margin-top: 22px;
+            color: var(--text-muted);
+            font-size: 16px;
+            max-width: 440px;
+            line-height: 1.6;
+        }
+
+        .search-bar {
+            margin-top: 32px;
+            display: flex;
+            align-items: center;
+            background: white;
+            border-radius: 40px;
+            padding: 6px 6px 6px 24px;
+            max-width: 420px;
+        }
+
+        .search-bar input {
+            border: none;
+            outline: none;
+            flex: 1;
+            font-size: 14px;
+            color: #333;
+            padding: 10px 0;
+        }
+
+        .search-bar button {
+            background: var(--purple);
+            color: white;
+            border: none;
+            padding: 14px 28px;
+            border-radius: 30px;
+            font-weight: 600;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        .search-bar button:hover {
+            background: var(--purple-light);
+        }
+
+        /* Hero Illustration */
+        .hero-art {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .blob {
+            width: 320px;
+            background: linear-gradient(160deg, #7b54f5, #4d2fa8);
+            border-radius: 150px;
+            position: relative;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            overflow: hidden;
+            /* Keeps image inside */
+        }
+
+        .student {
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+        }
+
+        .student img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            /* or cover */
+        }
+
+
+        .floating {
+            position: absolute;
+            filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.3));
+        }
+
+        .float-card {
+            top: 18%;
+            left: -8%;
+            width: 70px;
+            height: 50px;
+            background: #a7c7ff;
+            border-radius: 12px;
+            transform: rotate(-12deg);
+            animation: float1 4s ease-in-out infinite;
+        }
+
+        .float-star {
+            bottom: 30%;
+            left: -2%;
+            color: var(--yellow);
+            font-size: 38px;
+            animation: float2 5s ease-in-out infinite;
+        }
+
+        .float-dot {
+            top: 5%;
+            right: 0;
+            width: 30px;
+            height: 30px;
+            background: var(--pink);
+            border-radius: 50%;
+            opacity: 0.7;
+            animation: float2 6s ease-in-out infinite;
+        }
+
+        .float-hat {
+            top: 0%;
+            right: 18%;
+            font-size: 46px;
+            animation: float1 4.5s ease-in-out infinite;
+        }
+
+        @keyframes float1 {
+
+            0%,
+            100% {
+                transform: translateY(0) rotate(-12deg);
+            }
+
+            50% {
+                transform: translateY(-12px) rotate(-8deg);
+            }
+        }
+
+        @keyframes float2 {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-14px);
+            }
+        }
+
+        /* ===== PARTNERS ===== */
+        .partners-wrap {
+            max-width: 1200px;
+            margin: 0 auto 70px;
+            padding: 0 24px;
+        }
+
+        .partners {
+            background: var(--bg-card);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 40px;
+            padding: 18px 30px;
+            display: flex;
+            align-items: center;
+            gap: 18px;
+        }
+
+        .partners .tag {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+            color: var(--text-muted);
+            white-space: nowrap;
+        }
+
+        .tag .icon-box {
+            width: 28px;
+            height: 28px;
+            background: var(--purple);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .partner-track {
+            display: flex;
+            align-items: center;
+            gap: 48px;
+            overflow: hidden;
+            flex: 1;
+            position: relative;
+        }
+
+        .partner-track .items {
+            display: flex;
+            gap: 48px;
+            animation: scroll 18s linear infinite;
+        }
+
+        .partner-track:hover .items {
+            animation-play-state: paused;
+        }
+
+        @keyframes scroll {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        .partner-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--text-light);
+            white-space: nowrap;
+            opacity: 0.85;
+        }
+
+        .partner-item span.dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+        }
+
+        .nav-arrow {
+            width: 34px;
+            height: 34px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.08);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            flex-shrink: 0;
+            border: none;
+            color: white;
+            font-size: 16px;
+        }
+
+        /* ===== COURSES ===== */
+        .courses-section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px 100px;
+        }
+
+        .courses-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .courses-header h2 {
+            font-size: 34px;
+            font-weight: 800;
+        }
+
+        .courses-header h2 .accent {
+            color: var(--purple-light);
+        }
+
+        .tabs {
+            display: flex;
+            background: var(--bg-card);
+            padding: 6px;
+            border-radius: 30px;
+            gap: 4px;
+        }
+
+        .tab {
+            padding: 10px 20px;
+            border-radius: 24px;
+            font-size: 14px;
+            cursor: pointer;
+            color: var(--text-muted);
+            border: none;
+            background: transparent;
+            transition: all .25s;
+            white-space: nowrap;
+        }
+
+        .tab.active {
+            background: var(--purple);
+            color: white;
+        }
+
+        .course-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .course-card {
+            background: var(--bg-card);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            transition: transform .25s, box-shadow .25s;
+        }
+
+        .course-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 16px 40px rgba(108, 76, 240, 0.25);
+        }
+
+       .thumb {
+    position: relative;
+    width: 100%;
+    height: 180px; /* adjust to your needs */
+    overflow: hidden;
+    background: #eee; /* fallback color */
+}
+
+.thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+        .thumb .play-badge {
+            position: absolute;
+            bottom: 14px;
+            left: 14px;
+            background: rgba(0, 0, 0, 0.35);
+            backdrop-filter: blur(4px);
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .play-badge::before {
+            content: "▶";
+            font-size: 9px;
+        }
+
+        .card-body {
+            padding: 20px;
+        }
+
+        .card-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 14px;
+        }
+
+        .lesson-tag {
+            font-size: 12px;
+            color: var(--text-muted);
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .lesson-tag::before {
+            content: "▶";
+            font-size: 8px;
+            color: var(--purple-light);
+        }
+
+        .category-pill {
+            background: rgba(255, 255, 255, 0.08);
+            padding: 5px 14px;
+            border-radius: 20px;
+            font-size: 11px;
+            color: var(--text-muted);
+        }
+
+        .card-body h3 {
+            font-size: 17px;
+            line-height: 1.4;
+            margin-bottom: 16px;
+            font-weight: 700;
+        }
+
+        .instructor-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 14px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            margin-bottom: 14px;
+        }
+
+        .instructor {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .avatar {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            flex-shrink: 0;
+            background-image: url(image/user.png);
+            background-size: cover;
+            background-position: center;
+        }
+
+        .instructor .name {
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+        .instructor .role {
+            font-size: 11px;
+            color: var(--text-muted);
+        }
+
+        .students {
+            font-size: 12px;
+            color: var(--text-muted);
+        }
+
+        .card-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .stars {
+            color: var(--yellow);
+            font-size: 13px;
+            letter-spacing: 1px;
+        }
+
+        .enroll {
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--text-light);
+            text-decoration: underline;
+            cursor: pointer;
+        }
+        /* thumbnail color variants */
+        .t1 {
+            background: linear-gradient(135deg, #8b6cf0, #5a3fce);
+        }
+
+        .t2 {
+            background: linear-gradient(135deg, #3a6dab, #1d3a63);
+        }
+
+        .t3 {
+            background: linear-gradient(135deg, #f0d23f, #c9a51c);
+            color: #2a2300;
+        }
+
+        .t4 {
+            background: linear-gradient(135deg, #f0a7c0, #d9709a);
+            color: #3a0d1f;
+        }
+
+        .t5 {
+            background: linear-gradient(135deg, #5a4ad9, #2d2570);
+        }
+
+        .t6 {
+            background: linear-gradient(135deg, #e8e6f5, #c9c5e8);
+            color: #2a2550;
+        }
+
+        @media(max-width:900px) {
+            .hero {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-art {
+                order: -1;
+                height: 320px;
+            }
+
+            .hero h1 {
+                font-size: 38px;
+            }
+
+            nav.links {
+                display: none;
+            }
+
+            .course-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media(max-width:560px) {
+            .course-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .courses-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .tabs {
+                flex-wrap: wrap;
+            }
+
+            header {
+                flex-wrap: wrap;
+                gap: 14px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header id="navigetion_bar"></header>
+    <section class="hero">
+        <div>
+            <h1>Best courses <span class="accent">are</span><br>
+                waiting to enrich<br>
+                your skill
+                <span class="plus-row"><span class="plus">+</span><span class="plus">+</span><span
+                        class="plus">+</span></span>
+            </h1>
+            <p>Provides you with the latest online learning system and material that help your knowledge growing.</p>
+            <div class="search-bar">
+                <input type="text" placeholder="Want to learn?">
+                <button>Explore</button>
+            </div>
+        </div>
+
+        <div class="hero-art">
+            <div class="blob">
+                <div class="student">
+                    <img src="image/image.png" class="img-fluid" alt="">
+                </div>
+            </div>
+            <div class="floating float-card"></div>
+            <div class="floating float-star">★</div>
+            <div class="floating float-dot"></div>
+            <div class="floating float-hat">🎓</div>
+        </div>
+    </section>
+
+    <div class="partners-wrap">
+        <div class="partners">
+            <button class="nav-arrow" onclick="scrollPartners(-1)">‹</button>
+            <div class="tag"><span class="icon-box"> <img src="image/partner.png" class="img-fluid" width="30px" alt=""></span> Our Course Partners</div>
+            <div class="partner-track">
+                <div class="items" id="partnerItems">
+                    <div class="partner-item"><img src="image/HubSpot.png"  alt="HubSpot" style="width: 30px;"> HubSpot</div>
+                    <div class="partner-item"><img src="image/loom.png" alt="loom" style="width: 30px;"> loom</div>
+                    <div class="partner-item"><img src="image/GitLab.png" alt="GitLab" style="width: 30px;"> GitLab</div>
+                    <div class="partner-item"><img src="image/livechat.png" alt="LiveChat" style="width: 20px;"> LiveChat</div>
+                    <div class="partner-item"><img src="image/monday.com.jpg" alt="monday.com" style="width: 30px;"> monday.com</div>
+                    <div class="partner-item"><img src="image/HubSpot.png"  alt="HubSpot" style="width: 30px;"> HubSpot</div>
+                    <div class="partner-item"><img src="image/loom.png" alt="loom" style="width: 30px;"> loom</div>
+                    <div class="partner-item"><img src="image/GitLab.png" alt="GitLab" style="width: 30px;"> GitLab</div>
+                    <div class="partner-item"><img src="image/livechat.png" alt="LiveChat" style="width: 20px;"> LiveChat</div>
+                    <div class="partner-item"><img src="image/monday.com.jpg" alt="monday.com" style="width: 30px;"> monday.com</div>
+                </div>
+            </div>
+            <button class="nav-arrow" onclick="scrollPartners(1)">›</button>
+        </div>
+    </div>
+
+    <section class="courses-section">
+        <div class="courses-header">
+            <h2>Popular <span style="color: gray;">Courses</span></h2>
+            <div class="tabs" id="tabs">
+                <button class="tab active" data-cat="design">Design</button>
+                <button class="tab" data-cat="development">Development</button>
+                <button class="tab" data-cat="business">Business</button>
+                <button class="tab" data-cat="data">Data Science</button>
+                <button class="tab" data-cat="marketing">Marketing</button>
+            </div>
+        </div>
+
+        <div class="course-grid" id="courseGrid"></div>
+    </section>
+
+    <footer id="footer"></footer>
+
+    <script>
+        // Course data per category
+        const coursesByCategory = {
+            design: [
+                {
+                    thumb: "image/images1.jpg",
+                    title: "UI Design Fundamentals: Crafting Clean Digital Interfaces",
+                    name: "Adam Smith",
+                    role: "UI Designer",
+                    students: "50+ Students"
+                },
+                {
+                    thumb: "image/images3.png",
+                    title: "Motion Graphics for Beginners: Bringing Static Ideas to Life",
+                    name: "Lina Cho",
+                    role: "Motion Designer",
+                    students: "80+ Students"
+                },
+                {
+                    thumb: "image/images4.jpg",
+                    title: "Brand Identity Design: From Concept to Style Guide",
+                    name: "Omar Reyes",
+                    role: "Brand Designer",
+                    students: "65+ Students"
+                },
+                {
+                    thumb: "image/image5.png",
+                    title: "Typography Essentials: Pairing Fonts Like a Pro",
+                    name: "Sara Lim",
+                    role: "Type Designer",
+                    students: "40+ Students"
+                },
+                {
+                    thumb: "image/images6.png",
+                    title: "Design Systems 101: Building Scalable Component Libraries",
+                    name: "Jon Park",
+                    role: "Product Designer",
+                    students: "90+ Students"
+                },
+                {
+                    thumb: "image/images7.jpg",
+                    title: "Illustration for Web: Adding Personality to Interfaces",
+                    name: "Maya Chen",
+                    role: "Illustrator",
+                    students: "55+ Students"
+                }
+            ],
+            development: [
+                { thumb: 'image/images8.jpg', title: 'Python for Financial Analysis: Next and Algorithmic Trading', name: 'Adam Smith', role: 'Python Developer', students: '50+ Student' },
+                { thumb: 'image/images9.jpg', title: 'Full-Stack Web Development with Modern JavaScript', name: 'Eli Brooks', role: 'Web Developer', students: '120+ Student' },
+                { thumb: 'image/images10.jpg', title: 'Mastering React: Hooks, State and Component Patterns', name: 'Priya Nair', role: 'Frontend Engineer', students: '95+ Student' },
+                { thumb: 'image/images11.jpg', title: 'Backend Engineering with Node.js and PostgreSQL', name: 'Diego Ruiz', role: 'Backend Developer', students: '70+ Student' },
+                { thumb: 'image/images12.jpg', title: 'Mobile App Development with Swift for Beginners', name: 'Anna Kim', role: 'iOS Developer', students: '60+ Student' },
+                { thumb: 'image/images13.jpg', title: 'DevOps Foundations: CI/CD Pipelines Explained', name: 'Marcus Lee', role: 'DevOps Engineer', students: '45+ Student' },
+            ],
+            business: [
+                { thumb: 'image/image14.jpg', title: 'Startup Fundamentals: From Idea to First Customer', name: 'Adam Smith', role: 'Business Coach', students: '50+ Student' },
+                { thumb: 'image/images15.jpg', title: 'Negotiation Skills That Win Better Deals', name: 'Rachel Stone', role: 'Negotiation Coach', students: '75+ Student' },
+                { thumb: 'image/images16.jpg', title: 'Financial Modeling for Small Business Owners', name: 'Tom Harris', role: 'Financial Analyst', students: '65+ Student' },
+                { thumb: 'image/images17.jpg', title: 'Leadership Essentials: Managing High-Performing Teams', name: 'Nina Patel', role: 'Leadership Coach', students: '85+ Student' },
+                { thumb: 'image/images18.jpg', title: 'Marketing Strategy for Early-Stage Startups', name: 'Carl Yu', role: 'Growth Strategist', students: '40+ Student' },
+                { thumb: 'image/images19.png', title: 'Business Analytics: Making Decisions with Data', name: 'Lena Fox', role: 'Business Analyst', students: '55+ Student' },
+            ],
+            data: [
+                { thumb: 'image/images20.jpg', title: 'Python for Financial Analysis: Next and Algorithmic Trading', name: 'Adam Smith', role: 'Data Scientist', students: '50+ Student' },
+                { thumb: 'image/images21.jpg', title: 'Machine Learning Foundations with Scikit-Learn', name: 'Hana Suzuki', role: 'ML Engineer', students: '110+ Student' },
+                { thumb: 'image/images22.jpg', title: 'Data Visualization: Telling Stories with Charts', name: 'Victor Cole', role: 'Data Analyst', students: '68+ Student' },
+                { thumb: 'image/images23.jpg', title: 'SQL for Analysts: Queries That Actually Scale', name: 'Grace Han', role: 'Data Engineer', students: '72+ Student' },
+                { thumb: 'image/images24.jpg', title: 'Deep Learning Basics: Neural Networks Explained', name: 'Sam Okafor', role: 'AI Researcher', students: '90+ Student' },
+                { thumb: 'image/images25.jpg', title: 'Statistics for Data Science: A Practical Primer', name: 'Ivy Zhang', role: 'Statistician', students: '58+ Student' },
+            ],
+            marketing: [
+                { thumb: 'image/images26.jpg', title: 'SEO Mastery: Ranking Higher with Less Guesswork', name: 'Adam Smith', role: 'SEO Specialist', students: '50+ Student' },
+                { thumb: 'image/images27.jpg', title: 'Social Media Marketing for Small Brands', name: 'Tara Wells', role: 'Social Strategist', students: '80+ Student' },
+                { thumb: 'image/images28.jpg', title: 'Email Marketing That Converts: Lists to Loyalty', name: 'Ben Carter', role: 'CRM Marketer', students: '63+ Student' },
+                { thumb: 'image/images29.jpg', title: 'Content Marketing Strategy for Modern Brands', name: 'Olive Grant', role: 'Content Lead', students: '95+ Student' },
+                { thumb: 'image/images30.jpg', title: 'Paid Ads 101: Running Profitable Campaigns', name: 'Felix Roy', role: 'Performance Marketer', students: '47+ Student' },
+                { thumb: 'image/images31.jpg', title: 'Brand Storytelling: Connecting with Your Audience', name: 'Mona Singh', role: 'Brand Strategist', students: '58+ Student' },
+            ],
+        };
+
+       function renderCourses(cat) {
+    const grid = document.getElementById('courseGrid');
+    grid.innerHTML = '';
+    const list = coursesByCategory[cat] || [];
+    list.forEach(c => {
+        const card = document.createElement('div');
+        card.className = 'course-card';
+        card.innerHTML = `
+            <div class="thumb">
+                <img src="${c.thumb}" alt="${c.title}" onerror="this.style.display='none'">
+                <div class="play-badge">10x Lesson</div>
+            </div>
+            <div class="card-body">
+                <div class="card-top">
+                    <span class="lesson-tag">10x Lesson</span>
+                    <span class="category-pill">${cat.charAt(0).toUpperCase() + cat.slice(1)}</span>
+                </div>
+                <h3>${c.title}</h3>
+                <div class="instructor-row">
+                    <div class="instructor">
+                        <div class="avatar"></div>
+                        <div>
+                            <div class="name">${c.name}</div>
+                            <div class="role">${c.role}</div>
+                        </div>
+                    </div>
+                    <div class="students">${c.students}</div>
+                </div>
+                <div class="card-footer">
+                    <div class="stars">★★★★★</div>
+                    <div class="enroll">Enroll Now</div>
+                </div>
+            </div>
+        `;
+        grid.appendChild(card);
+    });
+}
+        document.getElementById('tabs').addEventListener('click', (e) => {
+            const btn = e.target.closest('.tab');
+            if (!btn) return;
+            document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+            btn.classList.add('active');
+            renderCourses(btn.dataset.cat);
+        });
+
+        function scrollPartners(dir) {
+            const track = document.getElementById('partnerItems');
+            const current = getComputedStyle(track).animationPlayState;
+            track.style.animationPlayState = 'paused';
+            let pos = track.getBoundingClientRect().left;
+            track.style.transform = `translateX(${pos + (dir * -120)}px)`;
+            setTimeout(() => track.style.animationPlayState = 'running', 1500);
+        }
+
+        renderCourses('design');
+    courses.design.forEach(course => {
+    document.getElementById("course-list").innerHTML += `
+        <div class="course-card">
+            <img src="${course.thumb}" alt="${course.title}" class="course-image">
+
+            <div class="course-content">
+                <h3>${course.title}</h3>
+                <p>${course.name}</p>
+                <span>${course.role}</span>
+                <p>${course.students}</p>
+            </div>
+        </div>
+    `;
+});
+    </script>
+    <script src="./component/navBar.js"></script>
+    <script src="./component/footer.js"></script>
+
+</body>
+
+</html>
