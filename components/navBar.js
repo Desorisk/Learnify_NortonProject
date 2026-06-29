@@ -5,10 +5,10 @@ const show_Navbar = `
     <span class="logo-text">Leanify Education</span>
   </div>
 
-  <ul class="nav-menu">
-    <li><a href="#" class="active">Home</a></li>
+        <ul class="nav-menu">
+    <li><a href="./index.html" class="active">Home</a></li>
     <li><a href="#">Course</a></li>
-    <li><a href="#">Blog</a></li>
+    <li><a href="./blog.html">Blog</a></li>
     <li><a href="#">About</a></li>
   </ul>
 
