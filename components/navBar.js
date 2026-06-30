@@ -14,9 +14,15 @@ function getNavRightHTML() {
         </button>
         <div class="profile-dropdown" id="profileDropdown">
           <button class="profile-dropdown-close" onclick="toggleProfileMenu()">✖</button>
-          <img src="${userAvatar}" alt="profile" class="profile-dropdown-avatar">
+          <img src="${userAvatar}" alt="profile" class="profile-dropdown-avatar" id="dropdownAvatarImg">
           <h3 class="profile-dropdown-name">${userName}</h3>
           <p class="profile-dropdown-email">${userEmail}</p>
+
+          <label class="profile-change-photo-btn">
+            Change photo
+            <input type="file" id="avatarFileInput" accept="image/*" hidden>
+          </label>
+
           <button class="profile-dropdown-logout" onclick="logout()">Log out</button>
         </div>
       </div>`;
@@ -120,5 +126,21 @@ document.addEventListener('click', (e) => {
   const menu = document.querySelector('.profile-menu');
   if (menu && !menu.contains(e.target)) {
     document.getElementById('profileDropdown')?.classList.remove('open');
+  }
+});
+
+// Handle profile photo change
+document.addEventListener('change', function (e) {
+  if (e.target && e.target.id === 'avatarFileInput') {
+    const file = e.target.files[0];
+    if (!file) return;
+
+    const reader = new FileReader();
+    reader.onload = function (event) {
+      const newAvatar = event.target.result;
+      localStorage.setItem('userAvatar', newAvatar);
+      location.reload();
+    };
+    reader.readAsDataURL(file);
   }
 });
