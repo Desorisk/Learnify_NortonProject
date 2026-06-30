@@ -1,24 +1,5 @@
-/* Refactored CSS with Green/Light Theme Palette */
 
-/* ── Reset & Base ── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-:root {
-  /* User Defined Palette */
-  --green:       #1a9e5c;
-  --green-dark:  #157a47;
-  --green-soft:  #eaf7f1;
-  --green-badge: #d2f4e5;
-  --text:        #1a1a2e;
-  --muted:       #6b7280;
-  
-  /* Layout Architecture Constants */
-  --bg-main:     #f8faf9;
-  --card-bg:     #ffffff;
-  --border:      rgba(26, 158, 92, 0.15);
-  --radius:      14px;
-  --transition:  0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
 
 html { scroll-behavior: smooth; }
 body {
@@ -456,11 +437,12 @@ img { display: block; width: 100%; }
 
 /* bannner style */
 .banner-section {
+  height: 600px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 60px 5%;
-  background-color: #dcfce7; /* Light mint green background */
+  background-color: var(--green-soft); /* Light mint green background */
   border-radius: 20px;
   margin: 20px;
 }
@@ -508,4 +490,21 @@ img { display: block; width: 100%; }
   max-width: 400px;
   height: auto;
   border-radius: 50% 50% 50% 50% / 30% 30% 70% 70%; /* Soft organic shape */
+}
+.banner-section .banner-content .btn-bannerCourse{
+    background-color: var(--green);
+    color: var(--white);
+    padding: 10px 20px;
+    border-radius: 25px;
+    border: none;
+    margin-right: 30px;
+    cursor: pointer;
+}
+.banner-section .banner-content .btn-bannerAbout{
+    color: var(--text);
+    padding: 10px 20px;
+    border-radius: 25px;
+    border: 2px solid var(--green);
+    cursor: pointer;
+    background-color: transparent;
 }
