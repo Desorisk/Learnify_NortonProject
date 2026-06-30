@@ -12,11 +12,6 @@ body {
 a { text-decoration: none; color: inherit; }
 img { display: block; width: 100%; }
 
-/* ── HERO ── */
-.hero {
-  padding: 80px 5vw 60px;
-  max-width: 1280px; margin: 0 auto;
-}
 .hero-eyebrow {
   display: inline-flex; align-items: center; gap: 8px;
   font-size: 0.78rem; font-weight: 600; letter-spacing: 0.12em;
@@ -487,6 +482,7 @@ img { display: block; width: 100%; }
 }
 
 .banner-image img {
+  margin-right: 100px;
   max-width: 400px;
   height: auto;
   border-radius: 50% 50% 50% 50% / 30% 30% 70% 70%; /* Soft organic shape */
