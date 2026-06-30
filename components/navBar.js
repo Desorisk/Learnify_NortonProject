@@ -7,7 +7,7 @@ const show_Navbar = `
 
         <ul class="nav-menu">
     <li><a href="./index.html" class="active">Home</a></li>
-    <li><a href="#">Course</a></li>
+    <li><a href="./course_list.html">Course</a></li>
     <li><a href="./blog.html">Blog</a></li>
     <li><a href="#">About</a></li>
   </ul>
