@@ -1,0 +1,53 @@
+/* css/pages/signup.css */
+
+.avatar-upload {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 10px;
+}
+
+.avatar-upload img {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: #eee;
+  border: 1px solid #ddd;
+}
+
+.avatar-upload-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #2b2b3d;
+  background: #f3f3f3;
+  padding: 8px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.avatar-upload-label:hover {
+  background: #e8e8e8;
+}
+
+.name-row {
+  display: flex;
+  gap: 12px;
+}
+
+.name-row > div {
+  flex: 1;
+}
+
+.switch-link {
+  text-align: center;
+  font-size: 13px;
+  color: #888;
+  margin-top: 16px;
+}
+
+.switch-link a {
+  color: #caa472;
+  font-weight: 600;
+  text-decoration: none;
+}
