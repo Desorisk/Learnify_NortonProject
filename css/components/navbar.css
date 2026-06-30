@@ -1,43 +1,45 @@
-  * {
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
   }
-
+ 
   body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-family: var(--font-primary);
     background: #f7f7f5;
   }
-
+ 
   /* ===== NAVBAR ===== */
   .navbar {
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 14px 24px;
-    background: #ffffff;
+    background: var(--green);
     border-bottom: 1px solid #ebebe8;
-    position: relative;
+    position: fixed;
+    top: 0;
+    z-index: 100;
   }
-
+ 
   .logo {
     display: flex;
     align-items: center;
     gap: 8px;
     flex-shrink: 0;
   }
-
+ 
   .logo-icon {
     width: 30px;
     height: 30px;
     border-radius: 8px;
-    background: #e1f5ee;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
   }
-
+ 
   svg.icon {
     display: inline-block;
     flex-shrink: 0;
@@ -46,21 +48,20 @@
     stroke-linecap: round;
     stroke-linejoin: round;
   }
-
+ 
   .logo-icon img {
     width: 36px;
     height: 36px;
-    stroke: #0f6e56;
   }
-
+ 
   .logo-text {
-    font-size: 16px;
+    font-size:  var(--fs-md);
     font-weight: 600;
-    color: #1a1a18;
+    color: var(--text);
     letter-spacing: -0.2px;
     white-space: nowrap;
   }
-
+ 
   /* Menu (desktop, inline) */
   .nav-menu {
     display: flex;
@@ -70,24 +71,21 @@
     flex: 1;
     justify-content: center;
   }
-
+ 
   .nav-menu a {
     font-size: 14px;
     font-weight: 500;
-    color: #5f5e5a;
+    color:  var(--text);
     text-decoration: none;
     white-space: nowrap;
     transition: color 0.15s ease;
   }
-
-  .nav-menu a.active {
-    color: #1a1a18;
-  }
-
+ 
+ 
   .nav-menu a:hover {
     color: #0f6e56;
   }
-
+ 
   /* Right side: search + login (desktop) */
   .nav-right {
     display: flex;
@@ -95,7 +93,7 @@
     gap: 10px;
     flex-shrink: 0;
   }
-
+ 
   .search-box {
     display: flex;
     align-items: center;
@@ -106,14 +104,14 @@
     height: 34px;
     width: 160px;
   }
-
+ 
   .search-box svg {
     width: 15px;
     height: 15px;
     stroke: #888780;
     flex-shrink: 0;
   }
-
+ 
   .search-box input {
     border: none;
     background: transparent;
@@ -123,17 +121,17 @@
     color: #1a1a18;
     height: 100%;
   }
-
+ 
   .search-box input::placeholder {
     color: #888780;
   }
-
+ 
   .login-btn {
     height: 34px;
     padding: 0 16px;
     font-size: 13px;
     font-weight: 600;
-    background: #0f6e56;
+    background: var(--green-dark);
     color: #ffffff;
     border: none;
     border-radius: 8px;
@@ -141,11 +139,11 @@
     white-space: nowrap;
     transition: background 0.15s ease;
   }
-
+ 
   .login-btn:hover {
     background: #085041;
   }
-
+ 
   /* Hamburger trigger (hidden on desktop) */
   .menu-toggle {
     display: none;
@@ -159,17 +157,17 @@
     border-radius: 8px;
     flex-shrink: 0;
   }
-
+ 
   .menu-toggle svg {
     width: 22px;
     height: 22px;
     stroke: #1a1a18;
   }
-
+ 
   .menu-toggle:hover {
     background: #f1efe8;
   }
-
+ 
   /* ============================================
      OFF-CANVAS DRAWER
      ============================================ */
@@ -182,12 +180,12 @@
     transition: opacity 0.25s ease, visibility 0.25s ease;
     z-index: 100;
   }
-
+ 
   .offcanvas-backdrop.open {
     opacity: 1;
     visibility: visible;
   }
-
+ 
   .offcanvas-drawer {
     position: fixed;
     top: 0;
@@ -203,11 +201,11 @@
     flex-direction: column;
     box-shadow: -2px 0 12px rgba(0,0,0,0.08);
   }
-
+ 
   .offcanvas-drawer.open {
     transform: translateX(0);
   }
-
+ 
   .offcanvas-header {
     display: flex;
     align-items: center;
@@ -216,7 +214,7 @@
     border-bottom: 1px solid #ebebe8;
     flex-shrink: 0;
   }
-
+ 
   .offcanvas-close {
     background: none;
     border: none;
@@ -229,23 +227,23 @@
     border-radius: 8px;
     flex-shrink: 0;
   }
-
+ 
   .offcanvas-close svg {
     width: 20px;
     height: 20px;
     stroke: #1a1a18;
   }
-
+ 
   .offcanvas-close:hover {
     background: #f1efe8;
   }
-
+ 
   .offcanvas-body {
     padding: 16px 20px;
     overflow-y: auto;
     flex: 1;
   }
-
+ 
   .offcanvas-search {
     display: flex;
     align-items: center;
@@ -256,14 +254,14 @@
     height: 42px;
     margin-bottom: 20px;
   }
-
+ 
   .offcanvas-search svg {
     width: 16px;
     height: 16px;
     stroke: #888780;
     flex-shrink: 0;
   }
-
+ 
   .offcanvas-search input {
     border: none;
     background: transparent;
@@ -273,17 +271,17 @@
     color: #1a1a18;
     height: 100%;
   }
-
+ 
   .offcanvas-menu {
     list-style: none;
     display: flex;
     flex-direction: column;
   }
-
+ 
   .offcanvas-menu a {
     font-size: 15px;
     font-weight: 500;
-    color: #1a1a18;
+    color: var(--text);
     text-decoration: none;
     padding: 13px 4px;
     border-bottom: 1px solid #f1efe8;
@@ -291,40 +289,32 @@
     align-items: center;
     gap: 10px;
   }
-
+ 
   .offcanvas-menu a svg {
     width: 18px;
     height: 18px;
-    stroke: #888780;
+    stroke: var(--text);
     flex-shrink: 0;
   }
-
-  .offcanvas-menu a.active {
-    color: #0f6e56;
-  }
-
-  .offcanvas-menu a.active svg {
-    stroke: #0f6e56;
-  }
-
+ 
   .offcanvas-footer {
     padding: 16px 20px;
     border-top: 1px solid #ebebe8;
     flex-shrink: 0;
   }
-
+ 
   .offcanvas-login-btn {
     height: 44px;
     font-size: 14px;
     font-weight: 600;
-    background: #0f6e56;
+    background: var(--green-dark);
     color: #ffffff;
     border: none;
     border-radius: 8px;
     cursor: pointer;
     width: 100%;
   }
-
+ 
   /* ============================================
      TABLET (≤900px)
      - inline menu hides, hamburger opens drawer
@@ -334,20 +324,20 @@
     .nav-menu {
       display: none;
     }
-
+ 
     .menu-toggle {
       display: flex;
     }
-
+ 
     .search-box {
       width: 130px;
     }
-
+ 
     .navbar {
       padding: 12px 20px;
     }
   }
-
+ 
   /* ============================================
      MOBILE (≤600px)
      - inline search + login also hide
@@ -357,12 +347,12 @@
     .navbar {
       padding: 10px 16px;
     }
-
+ 
     .search-box,
     .nav-right .login-btn {
       display: none;
     }
-
+ 
     .logo-text {
       font-size: 15px;
     }

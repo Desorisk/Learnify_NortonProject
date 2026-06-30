@@ -1,14 +1,14 @@
 const show_Navbar = `
 <nav class="navbar">
   <div class="logo">
-    <div class="logo-icon"><img src="../public/Leanify logo (1).png" alt="logo"></div>
+    <div class="logo-icon"><img src="../public/Leanify logo white bg.png" alt="logo"></div>
     <span class="logo-text">Leanify Education</span>
   </div>
 
-  <ul class="nav-menu">
-    <li><a href="#" class="active">Home</a></li>
-    <li><a href="#">Course</a></li>
-    <li><a href="#">Blog</a></li>
+        <ul class="nav-menu">
+    <li><a href="./index.html" class="active">Home</a></li>
+    <li><a href="./course_list.html">Course</a></li>
+    <li><a href="./blog.html">Blog</a></li>
     <li><a href="#">About</a></li>
   </ul>
 
@@ -30,8 +30,8 @@ const show_Navbar = `
 <aside class="offcanvas-drawer" id="drawer">
   <div class="offcanvas-header">
     <div class="logo">
-      <div class="logo-icon"><svg class="icon" viewBox="0 0 24 24"><path d="M22 9 12 5 2 9l10 4 10-4Z"/><path d="M6 10.6V16c0 1 2.7 3 6 3s6-2 6-3v-5.4"/><path d="M22 9v6"/></svg></div>
-      <span class="logo-text">Edura</span>
+      <div class="logo-icon"><img src="../public/Leanify logo (1).png" alt="logo"></div>
+    <span class="logo-text">Leanify Education</span>
     </div>
     <button class="offcanvas-close" aria-label="Close menu" onclick="closeDrawer()">
       <svg class="icon" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></svg>

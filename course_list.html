@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="./css/main.css" />
+
+</head>
+
+<body>
+
+    <header id="navigetion_bar"></header>
+    <section class="hero">
+        <div>
+            <h1>Best courses <span class="accent">are</span><br>
+                waiting to enrich<br>
+                your skill
+                <span class="plus-row"><span class="plus">+</span><span class="plus">+</span><span
+                        class="plus">+</span></span>
+            </h1>
+            <p>Provides you with the latest online learning system and material that help your knowledge growing.</p>
+            <div class="search-bar">
+                <input type="text" placeholder="Want to learn?">
+                <button>Explore</button>
+            </div>
+        </div>
+
+        <div class="hero-art">
+            <div class="blob">
+                <div class="student">
+                    <img src="./public/page/coursepage/image.png" class="img-fluid" alt="">
+                </div>
+            </div>
+            <div class="floating float-card"></div>
+            <div class="floating float-star">★</div>
+            <div class="floating float-dot"></div>
+            <div class="floating float-hat">🎓</div>
+        </div>
+    </section>
+
+    <div class="partners-wrap">
+        <div class="partners">
+            <button class="nav-arrow" onclick="scrollPartners(-1)">‹</button>
+            <div class="tag"><span class="icon-box"> <img src="./public/page/coursepage/partner.png" class="img-fluid" width="30px" alt=""></span> Our Course Partners</div>
+            <div class="partner-track">
+                <div class="items" id="partnerItems">
+                    <div class="partner-item"><img src="./public/page/coursepage/HubSpot.png"  alt="HubSpot" style="width: 30px;"> HubSpot</div>
+                    <div class="partner-item"><img src="./public/page/coursepage/loom.png" alt="loom" style="width: 30px;"> loom</div>
+                    <div class="partner-item"><img src="./public/page/coursepage/GitLab.png" alt="GitLab" style="width: 30px;"> GitLab</div>
+                    <div class="partner-item"><img src="./public/page/coursepage/livechat.png" alt="LiveChat" style="width: 20px;"> LiveChat</div>
+                    <div class="partner-item"><img src="./public/page/coursepage/monday.com.jpg" alt="monday.com" style="width: 30px;"> monday.com</div>
+                    <div class="partner-item"><img src="./public/page/coursepage/HubSpot.png"  alt="HubSpot" style="width: 30px;"> HubSpot</div>
+                    <div class="partner-item"><img src="./public/page/coursepage/loom.png" alt="loom" style="width: 30px;"> loom</div>
+                    <div class="partner-item"><img src="./public/page/coursepage/GitLab.png" alt="GitLab" style="width: 30px;"> GitLab</div>
+                    <div class="partner-item"><img src="./public/page/coursepage/livechat.png" alt="LiveChat" style="width: 20px;"> LiveChat</div>
+                    <div class="partner-item"><img src="./public/page/coursepage/monday.com.jpg" alt="monday.com" style="width: 30px;"> monday.com</div>
+                </div>
+            </div>
+            <button class="nav-arrow" onclick="scrollPartners(1)">›</button>
+        </div>
+    </div>
+
+    <section class="courses-section">
+        <div class="courses-header">
+            <h2>Popular <span style="color: gray;">Courses</span></h2>
+            <div class="tabs" id="tabs">
+                <button class="tab active" data-cat="design">Design</button>
+                <button class="tab" data-cat="development">Development</button>
+                <button class="tab" data-cat="business">Business</button>
+                <button class="tab" data-cat="data">Data Science</button>
+                <button class="tab" data-cat="marketing">Marketing</button>
+            </div>
+        </div>
+
+        <div class="course-grid" id="courseGrid"></div>
+    </section>
+
+    <footer id="footer"></footer>
+
+<script src="./js/course.js"></script>
+<script src="./components/navBar.js"></script>
+<script src="./components/footer.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,14 @@
+/* component */
+@import url("./components/footer.css");
+@import url("./components/navbar.css");
+
+/* custome style */
+@import url("./variables/color.css");
+@import url("./variables/typograpgy.css");
+@import url("./variables/spacing.css");
+
+/* style page */
+@import url("./pages/index.css");
+@import url("./pages/course.css");
+@import url("./pages/blog.css");
+@import url("./pages/about.css");
