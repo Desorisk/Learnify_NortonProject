@@ -18,9 +18,9 @@
     padding: 14px 24px;
     background: var(--green);
     border-bottom: 1px solid #ebebe8;
-    position: relative;
     position: fixed;
-    z-index: 50;
+    top: 0;
+    z-index: 100;
   }
  
   .logo {
