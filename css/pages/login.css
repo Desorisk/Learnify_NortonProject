@@ -1,6 +1,10 @@
+.body_login{
+  place-items: center;
+  place-content: center;
+}
 .card {
   display: flex;
-  width: 800px;
+  width: 1080px;
   max-width: 92%;
   border-radius: 16px;
   overflow: hidden;
@@ -9,7 +13,7 @@
 }
 .left-panel {
   flex: 1;
-  background: #efe6d9;
+  background: var(--green);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -24,14 +28,16 @@
   display: flex;
   flex-direction: column;
 }
-.brand {
-  font-size: 24px;
-  font-weight: 700;
+.brand{
+  width: 100%;
+  place-items: center;
+}
+.brand img{
+  width: 150px;
   margin-bottom: 30px;
+  align-content: center;
 }
-.brand span {
-  color: #caa472;
-}
+
 .welcome {
   font-size: 22px;
   font-weight: 600;
@@ -72,7 +78,7 @@ form input:focus {
   padding: 14px;
   border: none;
   border-radius: 8px;
-  background: #2b2b3d;
+  background: var(--green);
   color: #fff;
   font-size: 15px;
   font-weight: 600;

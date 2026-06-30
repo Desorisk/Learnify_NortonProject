@@ -1,5 +1,9 @@
 /* css/pages/signup.css */
 
+.body_signup{
+  place-items: center;
+  place-content: center;
+}
 .avatar-upload {
   display: flex;
   align-items: center;
@@ -47,7 +51,7 @@
 }
 
 .switch-link a {
-  color: #caa472;
+  color: var(--green);
   font-weight: 600;
   text-decoration: none;
 }

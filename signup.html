@@ -8,31 +8,23 @@
 <link rel="stylesheet" href="./css/pages/login.css">
 <link rel="stylesheet" href="./css/pages/signup.css">
 </head>
-<body>
+<body class="body_signup">
 
 <div class="card">
   <div class="left-panel">
-    <svg viewBox="0 0 300 400" xmlns="http://www.w3.org/2000/svg">
-      <rect x="40" y="330" width="220" height="14" rx="4" fill="#3a3470"/>
-      <rect x="60" y="260" width="160" height="14" fill="#caa472"/>
-      <rect x="70" y="274" width="10" height="60" fill="#5a3a2a"/>
-      <rect x="190" y="274" width="10" height="60" fill="#5a3a2a"/>
-      <rect x="80" y="220" width="60" height="40" rx="4" fill="#2b2b3d"/>
-      <circle cx="150" cy="170" r="35" fill="#f0b18c"/>
-      <rect x="120" y="200" width="60" height="70" rx="20" fill="#f4e9d8"/>
-      <circle cx="135" cy="165" r="8" fill="none" stroke="#222" stroke-width="2"/>
-      <circle cx="165" cy="165" r="8" fill="none" stroke="#222" stroke-width="2"/>
-    </svg>
+    <img src="./public/login.png" alt="login-photo">
   </div>
 
   <div class="right-panel">
-    <div class="brand">EDU<span>-X</span></div>
+    <div class="brand">
+      <img src="./public/Leanify logo (1).png" alt="">
+    </div>
     <div class="welcome">Create Account</div>
 
     <form id="signupForm">
 
       <div class="avatar-upload">
-        <img id="avatarPreview" src="./public/default-avatar.png" alt="avatar preview">
+        <img id="avatarPreview" src="./public/default-avatar.png" alt="Photo">
         <label for="avatarInput" class="avatar-upload-label">Choose photo</label>
         <input type="file" id="avatarInput" accept="image/*" hidden>
       </div>
@@ -40,16 +32,16 @@
       <div class="name-row">
         <div>
           <label for="firstName">FIRST NAME</label>
-          <input id="firstName" type="text" placeholder="Kunal" required>
+          <input id="firstName" type="text" placeholder="first-name" required>
         </div>
         <div>
           <label for="lastName">LAST NAME</label>
-          <input id="lastName" type="text" placeholder="Patil" required>
+          <input id="lastName" type="text" placeholder="last-name" required>
         </div>
       </div>
 
       <label for="signupEmail">EMAIL ID</label>
-      <input id="signupEmail" type="email" placeholder="kunal@bvp.com" required>
+      <input id="signupEmail" type="email" placeholder="example@gmail.com" required>
 
       <label for="signupPassword">PASSWORD</label>
       <input id="signupPassword" type="password" placeholder="*********" required>
