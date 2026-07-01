@@ -2,7 +2,7 @@ const show_Footer = `
 <footer class="site-footer">
       <div class="footer-top">
         <div class="footer-col">
-        <div class="footer-logo"><img src="../public/Leanify logo white bg.png" alt="logo"><h4>Learnify Education</h4></div>
+        <div class="footer-logo"><img src="./public/Leanify logo white bg.png" alt="logo"><h4>Learnify Education</h4></div>
           <div class="access-box">
             <div class="footer-search">
               <input type="text" placeholder="Search courses" />

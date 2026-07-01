@@ -215,7 +215,7 @@
         }
 
         .partners {
-            background: var(--bg-card);
+            background: var(--green);
             border: 1px solid rgba(255, 255, 255, 0.08);
             border-radius: 40px;
             padding: 18px 30px;
@@ -331,7 +331,7 @@
 
         .tabs {
             display: flex;
-            background: var(--bg-card);
+            background: var(--green);
             padding: 6px;
             border-radius: 30px;
             gap: 4px;
@@ -342,7 +342,7 @@
             border-radius: 24px;
             font-size: 14px;
             cursor: pointer;
-            color: var(--text-muted);
+            color: var(--text);
             border: none;
             background: transparent;
             transition: all .25s;
@@ -350,7 +350,7 @@
         }
 
         .tab.active {
-            background: var(--purple);
+            background: var(--green-dark);
             color: white;
         }
 
@@ -361,7 +361,7 @@
         }
 
         .course-card {
-            background: var(--bg-card);
+            background: var(--green-soft);
             border-radius: var(--radius-lg);
             overflow: hidden;
             border: 1px solid rgba(255, 255, 255, 0.06);
@@ -419,7 +419,7 @@
 
         .lesson-tag {
             font-size: 12px;
-            color: var(--text-muted);
+            color: var(--text);
             display: flex;
             align-items: center;
             gap: 6px;
@@ -428,7 +428,7 @@
         .lesson-tag::before {
             content: "▶";
             font-size: 8px;
-            color: var(--purple-light);
+            color: var(--text);
         }
 
         .category-pill {
@@ -436,7 +436,7 @@
             padding: 5px 14px;
             border-radius: 20px;
             font-size: 11px;
-            color: var(--text-muted);
+            color: var(--text);
         }
 
         .card-body h3 {
@@ -466,9 +466,14 @@
             height: 36px;
             border-radius: 50%;
             flex-shrink: 0;
-            background-image: url(image/user.png);
             background-size: cover;
             background-position: center;
+        }
+        .avatar img{
+            border-radius:100% ;
+            width: 36px;
+            height: 36px;
+            object-fit: cover;
         }
 
         .instructor .name {
@@ -483,7 +488,7 @@
 
         .students {
             font-size: 12px;
-            color: var(--text-muted);
+            color: var(--text);
         }
 
         .card-footer {
@@ -494,14 +499,14 @@
 
         .stars {
             color: var(--yellow);
-            font-size: 13px;
+            font-size: 20px;
             letter-spacing: 1px;
         }
 
         .enroll {
             font-size: 13px;
             font-weight: 600;
-            color: var(--text-light);
+            color: var(--text);
             text-decoration: underline;
             cursor: pointer;
         }
