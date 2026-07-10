@@ -23,8 +23,8 @@
             </h1>
             <p>Provides you with the latest online learning system and material that help your knowledge growing.</p>
             <div class="search-bar">
-                <input type="text" placeholder="Want to learn?">
-                <button>Explore</button>
+                <input type="text" id="heroSearchInput" placeholder="Want to learn?">
+                <button id="heroSearchBtn">Explore</button>
             </div>
         </div>
 
@@ -65,7 +65,7 @@
 
     <section class="courses-section">
         <div class="courses-header">
-            <h2>Popular <span style="color: gray;">Courses</span></h2>
+            <h2 id="coursesHeading">Popular <span style="color: gray;">Courses</span></h2>
             <div class="tabs" id="tabs">
                 <button class="tab active" data-cat="design">Design</button>
                 <button class="tab" data-cat="development">Development</button>
@@ -74,6 +74,8 @@
                 <button class="tab" data-cat="marketing">Marketing</button>
             </div>
         </div>
+
+        <p id="searchStatus" style="display:none; margin: -10px 0 20px; color: gray; font-size: 14px;"></p>
 
         <div class="course-grid" id="courseGrid"></div>
     </section>

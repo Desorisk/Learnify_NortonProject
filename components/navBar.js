@@ -48,7 +48,7 @@ const show_Navbar = `
   <div class="nav-right">
     <div class="search-box">
       <svg class="icon" viewBox="0 0 24 24"><circle cx="10" cy="10" r="7"/><path d="m21 21-4.3-4.3"/></svg>
-      <input type="text" placeholder="Search" aria-label="Search">
+      <input type="text" id="navSearchInput" placeholder="Search" aria-label="Search">
     </div>
     ${getNavRightHTML()}
     <button class="menu-toggle" aria-label="Open menu" onclick="openDrawer()">
@@ -72,7 +72,7 @@ const show_Navbar = `
   <div class="offcanvas-body">
     <div class="offcanvas-search">
       <svg class="icon" viewBox="0 0 24 24"><circle cx="10" cy="10" r="7"/><path d="m21 21-4.3-4.3"/></svg>
-      <input type="text" placeholder="Search" aria-label="Search">
+      <input type="text" id="drawerSearchInput" placeholder="Search" aria-label="Search">
     </div>
 
     <ul class="offcanvas-menu">
@@ -126,6 +126,23 @@ document.addEventListener('click', (e) => {
   const menu = document.querySelector('.profile-menu');
   if (menu && !menu.contains(e.target)) {
     document.getElementById('profileDropdown')?.classList.remove('open');
+  }
+});
+
+// Global site search: pressing Enter in either navbar search box takes the
+// user to the course list, filtered to their query.
+function goToCourseSearch(query) {
+  const q = query.trim();
+  if (!q) return;
+  window.location.href = `./course_list.html?q=${encodeURIComponent(q)}`;
+}
+
+['navSearchInput', 'drawerSearchInput'].forEach((id) => {
+  const input = document.getElementById(id);
+  if (input) {
+    input.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') goToCourseSearch(input.value);
+    });
   }
 });
 

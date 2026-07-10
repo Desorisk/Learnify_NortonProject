@@ -297,6 +297,19 @@ document.getElementById("tabs").addEventListener("click", (e) => {
     .querySelectorAll(".tab")
     .forEach((t) => t.classList.remove("active"));
   btn.classList.add("active");
+
+  // Leaving search mode: reset heading/status and clear the ?q= param + hero input
+  const heading = document.getElementById("coursesHeading");
+  const status = document.getElementById("searchStatus");
+  const heroInput = document.getElementById("heroSearchInput");
+  heading.innerHTML = `Popular <span style="color: gray;">Courses</span>`;
+  status.style.display = "none";
+  status.innerHTML = "";
+  if (heroInput) heroInput.value = "";
+  const url = new URL(window.location);
+  url.searchParams.delete("q");
+  window.history.replaceState({}, "", url);
+
   renderCourses(btn.dataset.cat);
 });
 
@@ -309,18 +322,150 @@ function scrollPartners(dir) {
   setTimeout(() => (track.style.animationPlayState = "running"), 1500);
 }
 
-renderCourses("design");
-courses.design.forEach((course) => {
-  document.getElementById("course-list").innerHTML += `
-        <div class="course-card">
-            <img src="${course.thumb}" alt="${course.title}" class="course-image">
+// ===== SEARCH FEATURE =====
 
-            <div class="course-content">
-                <h3>${course.title}</h3>
-                <p>${course.name}</p>
-                <span>${course.role}</span>
-                <p>${course.students}</p>
+// Flattens every category into one array so we can search across all of them at once
+function getAllCourses() {
+  const all = [];
+  Object.keys(coursesByCategory).forEach((cat) => {
+    coursesByCategory[cat].forEach((c) => all.push({ ...c, cat }));
+  });
+  return all;
+}
+
+// Renders a given list of courses (already resolved, with a `cat` field) into the grid
+function renderCourseCards(list) {
+  const grid = document.getElementById("courseGrid");
+  grid.innerHTML = "";
+  list.forEach((c) => {
+    const card = document.createElement("div");
+    card.className = "course-card";
+    card.innerHTML = `
+            <div class="thumb">
+                <img src="${c.thumb}" alt="${c.title}" onerror="this.style.display='none'">
+                <div class="play-badge">10x Lesson</div>
             </div>
-        </div>
-    `;
-});
+            <div class="card-body">
+                <div class="card-top">
+                    <span class="lesson-tag">10x Lesson</span>
+                    <span class="category-pill">${c.cat.charAt(0).toUpperCase() + c.cat.slice(1)}</span>
+                </div>
+                <h3>${c.title}</h3>
+                <div class="instructor-row">
+                    <div class="instructor">
+                        <div class="avatar">
+                          <img src=${c.images} alt="">
+                        </div>
+                        <div>
+                            <div class="name">${c.name}</div>
+                        </div>
+                    </div>
+                    <div class="students">${c.students}</div>
+                </div>
+                <div class="card-footer">
+                    <div class="stars">★★★★★</div>
+                    <div class="enroll">Enroll Now</div>
+                </div>
+            </div>
+        `;
+    grid.appendChild(card);
+  });
+}
+
+// Searches title, instructor name, instructor role, and category for the query text
+function searchCourses(query) {
+  const q = query.trim().toLowerCase();
+  if (!q) return getAllCourses();
+  return getAllCourses().filter((c) =>
+    c.title.toLowerCase().includes(q) ||
+    c.name.toLowerCase().includes(q) ||
+    c.role.toLowerCase().includes(q) ||
+    c.cat.toLowerCase().includes(q)
+  );
+}
+
+function runSearch(query) {
+  const heading = document.getElementById("coursesHeading");
+  const status = document.getElementById("searchStatus");
+  const tabs = document.getElementById("tabs");
+  const results = searchCourses(query);
+
+  // Switch heading/status into "search mode"
+  heading.innerHTML = `Search results for <span style="color: gray;">"${query}"</span>`;
+  tabs.querySelectorAll(".tab").forEach((t) => t.classList.remove("active"));
+
+  status.style.display = "block";
+  status.innerHTML = results.length
+    ? `${results.length} course${results.length === 1 ? "" : "s"} found. <a href="#" id="clearSearchLink" style="color:#1a9e5c;">Clear search</a>`
+    : `No courses matched "${query}". <a href="#" id="clearSearchLink" style="color:#1a9e5c;">Clear search</a>`;
+
+  document.getElementById("clearSearchLink").addEventListener("click", (e) => {
+    e.preventDefault();
+    clearSearch();
+  });
+
+  if (results.length) {
+    renderCourseCards(results);
+  } else {
+    document.getElementById("courseGrid").innerHTML =
+      `<p style="grid-column:1/-1; text-align:center; color:gray; padding: 40px 0;">
+        Try a different keyword, or browse a category above.
+      </p>`;
+  }
+}
+
+function clearSearch() {
+  const heading = document.getElementById("coursesHeading");
+  const status = document.getElementById("searchStatus");
+  const heroInput = document.getElementById("heroSearchInput");
+
+  heading.innerHTML = `Popular <span style="color: gray;">Courses</span>`;
+  status.style.display = "none";
+  status.innerHTML = "";
+  if (heroInput) heroInput.value = "";
+
+  document.querySelectorAll(".tab").forEach((t) => t.classList.remove("active"));
+  document.querySelector('.tab[data-cat="design"]').classList.add("active");
+
+  // Clean the ?q= param from the URL without reloading the page
+  const url = new URL(window.location);
+  url.searchParams.delete("q");
+  window.history.replaceState({}, "", url);
+
+  renderCourses("design");
+}
+
+function triggerHeroSearch() {
+  const input = document.getElementById("heroSearchInput");
+  const query = input.value;
+  if (!query.trim()) {
+    clearSearch();
+    return;
+  }
+  const url = new URL(window.location);
+  url.searchParams.set("q", query);
+  window.history.replaceState({}, "", url);
+  runSearch(query);
+}
+
+const heroSearchBtn = document.getElementById("heroSearchBtn");
+const heroSearchInput = document.getElementById("heroSearchInput");
+if (heroSearchBtn) {
+  heroSearchBtn.addEventListener("click", triggerHeroSearch);
+}
+if (heroSearchInput) {
+  heroSearchInput.addEventListener("keydown", (e) => {
+    if (e.key === "Enter") triggerHeroSearch();
+  });
+}
+
+// ===== INITIAL LOAD =====
+// If the page was opened with ?q=..., that came from the navbar search on
+// another page — run the search immediately instead of the default "design" tab.
+const initialQuery = new URLSearchParams(window.location.search).get("q");
+if (initialQuery) {
+  if (heroSearchInput) heroSearchInput.value = initialQuery;
+  runSearch(initialQuery);
+} else {
+  renderCourses("design");
+}
