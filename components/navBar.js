@@ -34,7 +34,7 @@ function getNavRightHTML() {
 const show_Navbar = `
 <nav class="navbar">
   <div class="logo">
-    <div class="logo-icon"><img src="./public/Leanify logo white bg.png" alt="logo"></div>
+    <div class="logo-icon"><img src="./public/ModernLogo.png" alt="logo"></div>
     <span class="logo-text">Leanify Education</span>
   </div>
 
@@ -61,7 +61,7 @@ const show_Navbar = `
 <aside class="offcanvas-drawer" id="drawer">
   <div class="offcanvas-header">
     <div class="logo">
-      <div class="logo-icon"><img src="./public/Leanify logo (1).png" alt="logo"></div>
+      <div class="logo-icon"><img src="./public/ModernLogo.png" alt="logo"></div>
       <span class="logo-text">Leanify Education</span>
     </div>
     <button class="offcanvas-close" aria-label="Close menu" onclick="closeDrawer()">
