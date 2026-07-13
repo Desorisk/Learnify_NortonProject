@@ -49,6 +49,38 @@ const coursesByCategory = {
       students: "55+ Students",
       images: "./public/page/homepage/narin.jpg"
     },
+    {
+      thumb: "./public/page/coursepage/images1.jpg",
+      title: "UX Research Methods: Understanding Real Users",
+      name: "Chan Narin",
+      role: "UX Researcher",
+      students: "48+ Students",
+      images: "./public/page/homepage/narin.jpg"
+    },
+    {
+      thumb: "./public/page/coursepage/images3.png",
+      title: "Design Thinking Workshop: Solving Problems Creatively",
+      name: "Chan Narin",
+      role: "Design Strategist",
+      students: "72+ Students",
+      images: "./public/page/homepage/narin.jpg"
+    },
+    {
+      thumb: "./public/page/coursepage/images4.jpg",
+      title: "Figma Mastery: Prototyping Like a Pro",
+      name: "Chan Narin",
+      role: "Product Designer",
+      students: "100+ Students",
+      images: "./public/page/homepage/narin.jpg"
+    },
+    {
+      thumb: "./public/page/coursepage/image5.png",
+      title: "Color Theory for Digital Products",
+      name: "Chan Narin",
+      role: "Visual Designer",
+      students: "38+ Students",
+      images: "./public/page/homepage/narin.jpg"
+    },
   ],
   development: [
     {
@@ -97,6 +129,38 @@ const coursesByCategory = {
       name: "Boeun Soama",
       role: "DevOps Engineer",
       students: "45+ Student",
+      images: "./public/page/homepage/soama.JPG"
+    },
+    {
+      thumb: "./public/page/coursepage/images8.jpg",
+      title: "Introduction to Data Structures and Algorithms",
+      name: "Boeun Soama",
+      role: "Software Engineer",
+      students: "88+ Student",
+      images: "./public/page/homepage/soama.JPG"
+    },
+    {
+      thumb: "./public/page/coursepage/images9.jpg",
+      title: "Building REST APIs with Express and MongoDB",
+      name: "Boeun Soama",
+      role: "Backend Developer",
+      students: "64+ Student",
+      images: "./public/page/homepage/soama.JPG"
+    },
+    {
+      thumb: "./public/page/coursepage/images10.jpg",
+      title: "TypeScript for JavaScript Developers",
+      name: "Boeun Soama",
+      role: "Frontend Engineer",
+      students: "101+ Student",
+      images: "./public/page/homepage/soama.JPG"
+    },
+    {
+      thumb: "./public/page/coursepage/images11.jpg",
+      title: "Cloud Computing Basics with AWS",
+      name: "Boeun Soama",
+      role: "Cloud Engineer",
+      students: "77+ Student",
       images: "./public/page/homepage/soama.JPG"
     },
   ],
@@ -149,6 +213,38 @@ const coursesByCategory = {
       students: "55+ Student",
       images: "./public/page/homepage/senghour.jpg"
     },
+    {
+      thumb: "./public/page/coursepage/image14.jpg",
+      title: "Project Management Essentials: Delivering On Time",
+      name: "Moeun Senghour",
+      role: "Project Manager",
+      students: "83+ Student",
+      images: "./public/page/homepage/senghour.jpg"
+    },
+    {
+      thumb: "./public/page/coursepage/images15.jpg",
+      title: "Business Communication: Writing That Gets Results",
+      name: "Moeun Senghour",
+      role: "Communications Coach",
+      students: "61+ Student",
+      images: "./public/page/homepage/senghour.jpg"
+    },
+    {
+      thumb: "./public/page/coursepage/images16.jpg",
+      title: "Supply Chain Fundamentals for Growing Companies",
+      name: "Moeun Senghour",
+      role: "Operations Manager",
+      students: "42+ Student",
+      images: "./public/page/homepage/senghour.jpg"
+    },
+    {
+      thumb: "./public/page/coursepage/images17.jpg",
+      title: "Customer Success Strategy: Retaining Your Best Clients",
+      name: "Moeun Senghour",
+      role: "Customer Success Lead",
+      students: "70+ Student",
+      images: "./public/page/homepage/senghour.jpg"
+    },
   ],
   data: [
     {
@@ -199,6 +295,38 @@ const coursesByCategory = {
       students: "58+ Student",
       images: "./public/page/homepage/vandeth.png"
     },
+    {
+      thumb: "./public/page/coursepage/images20.jpg",
+      title: "Big Data with Apache Spark: Processing at Scale",
+      name: "Loeun Vandeth",
+      role: "Data Engineer",
+      students: "66+ Student",
+      images: "./public/page/homepage/vandeth.png"
+    },
+    {
+      thumb: "./public/page/coursepage/images21.jpg",
+      title: "Natural Language Processing Fundamentals",
+      name: "Loeun Vandeth",
+      role: "NLP Engineer",
+      students: "80+ Student",
+      images: "./public/page/homepage/vandeth.png"
+    },
+    {
+      thumb: "./public/page/coursepage/images22.jpg",
+      title: "A/B Testing and Experimentation for Data Teams",
+      name: "Loeun Vandeth",
+      role: "Data Scientist",
+      students: "52+ Student",
+      images: "./public/page/homepage/vandeth.png"
+    },
+    {
+      thumb: "./public/page/coursepage/images23.jpg",
+      title: "Data Engineering Pipelines with Airflow",
+      name: "Loeun Vandeth",
+      role: "Data Engineer",
+      students: "44+ Student",
+      images: "./public/page/homepage/vandeth.png"
+    },
   ],
   marketing: [
     {
@@ -242,12 +370,536 @@ const coursesByCategory = {
       images: "./public/page/homepage/senghour.jpg"
     },
     {
-      thumb: "./public/page/coursepage /images31.jpg",
+      thumb: "./public/page/coursepage/images31.jpg",
       title: "Brand Storytelling: Connecting with Your Audience",
       name: "Moeun Senghour",
       role: "Brand Strategist",
       students: "58+ Student",
       images: "./public/page/homepage/senghour.jpg"
+    },
+    {
+      thumb: "./public/page/coursepage/images26.jpg",
+      title: "Marketing Analytics: Measuring What Matters",
+      name: "Moeun Senghour",
+      role: "Marketing Analyst",
+      students: "51+ Student",
+      images: "./public/page/homepage/senghour.jpg"
+    },
+    {
+      thumb: "./public/page/coursepage/images27.jpg",
+      title: "Influencer Marketing Playbook for New Brands",
+      name: "Moeun Senghour",
+      role: "Influencer Marketing Manager",
+      students: "39+ Student",
+      images: "./public/page/homepage/senghour.jpg"
+    },
+    {
+      thumb: "./public/page/coursepage/images28.jpg",
+      title: "Conversion Rate Optimization Basics",
+      name: "Moeun Senghour",
+      role: "Growth Marketer",
+      students: "67+ Student",
+      images: "./public/page/homepage/senghour.jpg"
+    },
+    {
+      thumb: "./public/page/coursepage/images29.jpg",
+      title: "Marketing Automation with HubSpot",
+      name: "Moeun Senghour",
+      role: "Marketing Ops Specialist",
+      students: "54+ Student",
+      images: "./public/page/homepage/senghour.jpg"
+    },
+  ],
+  ai: [
+    {
+      thumb: "./public/page/coursepage/images1.jpg",
+      title: "Introduction to Artificial Intelligence: Concepts and History",
+      name: "Loeun Vandeth",
+      role: "AI Researcher",
+      students: "92+ Student",
+      images: "./public/page/homepage/vandeth.png"
+    },
+    {
+      thumb: "./public/page/coursepage/images3.png",
+      title: "Prompt Engineering for Large Language Models",
+      name: "Loeun Vandeth",
+      role: "AI Engineer",
+      students: "140+ Student",
+      images: "./public/page/homepage/vandeth.png"
+    },
+    {
+      thumb: "./public/page/coursepage/images4.jpg",
+      title: "Building Chatbots with Transformer Models",
+      name: "Loeun Vandeth",
+      role: "NLP Engineer",
+      students: "76+ Student",
+      images: "./public/page/homepage/vandeth.png"
+    },
+    {
+      thumb: "./public/page/coursepage/image5.png",
+      title: "Computer Vision Basics: Teaching Machines to See",
+      name: "Loeun Vandeth",
+      role: "Computer Vision Engineer",
+      students: "64+ Student",
+      images: "./public/page/homepage/vandeth.png"
+    },
+    {
+      thumb: "./public/page/coursepage/images6.png",
+      title: "Reinforcement Learning: Teaching Agents to Decide",
+      name: "Loeun Vandeth",
+      role: "ML Engineer",
+      students: "48+ Student",
+      images: "./public/page/homepage/vandeth.png"
+    },
+    {
+      thumb: "./public/page/coursepage/images7.jpg",
+      title: "Generative AI: From GANs to Diffusion Models",
+      name: "Loeun Vandeth",
+      role: "AI Researcher",
+      students: "108+ Student",
+      images: "./public/page/homepage/vandeth.png"
+    },
+    {
+      thumb: "./public/page/coursepage/images8.jpg",
+      title: "Ethics and Bias in AI Systems",
+      name: "Loeun Vandeth",
+      role: "AI Ethics Consultant",
+      students: "37+ Student",
+      images: "./public/page/homepage/vandeth.png"
+    },
+    {
+      thumb: "./public/page/coursepage/images9.jpg",
+      title: "MLOps: Deploying Machine Learning Models to Production",
+      name: "Loeun Vandeth",
+      role: "MLOps Engineer",
+      students: "59+ Student",
+      images: "./public/page/homepage/vandeth.png"
+    },
+    {
+      thumb: "./public/page/coursepage/images10.jpg",
+      title: "AI for Business: Practical Use Cases and ROI",
+      name: "Loeun Vandeth",
+      role: "AI Strategist",
+      students: "84+ Student",
+      images: "./public/page/homepage/vandeth.png"
+    },
+    {
+      thumb: "./public/page/coursepage/images11.jpg",
+      title: "Fine-Tuning Language Models for Custom Tasks",
+      name: "Loeun Vandeth",
+      role: "AI Engineer",
+      students: "71+ Student",
+      images: "./public/page/homepage/vandeth.png"
+    },
+  ],
+  database: [
+    {
+      thumb: "./public/page/coursepage/images12.jpg",
+      title: "SQL Fundamentals: From SELECT to Subqueries",
+      name: "Boeun Soama",
+      role: "Database Developer",
+      students: "130+ Student",
+      images: "./public/page/homepage/soama.JPG"
+    },
+    {
+      thumb: "./public/page/coursepage/images13.jpg",
+      title: "Relational Database Design and Normalization",
+      name: "Boeun Soama",
+      role: "Database Architect",
+      students: "62+ Student",
+      images: "./public/page/homepage/soama.JPG"
+    },
+    {
+      thumb: "./public/page/coursepage/image14.jpg",
+      title: "PostgreSQL for Backend Developers",
+      name: "Boeun Soama",
+      role: "Database Engineer",
+      students: "77+ Student",
+      images: "./public/page/homepage/soama.JPG"
+    },
+    {
+      thumb: "./public/page/coursepage/images15.jpg",
+      title: "NoSQL Databases: MongoDB in Practice",
+      name: "Boeun Soama",
+      role: "Database Engineer",
+      students: "95+ Student",
+      images: "./public/page/homepage/soama.JPG"
+    },
+    {
+      thumb: "./public/page/coursepage/images16.jpg",
+      title: "Database Performance Tuning and Indexing",
+      name: "Boeun Soama",
+      role: "Database Administrator",
+      students: "41+ Student",
+      images: "./public/page/homepage/soama.JPG"
+    },
+    {
+      thumb: "./public/page/coursepage/images17.jpg",
+      title: "Data Modeling for Scalable Applications",
+      name: "Boeun Soama",
+      role: "Data Architect",
+      students: "53+ Student",
+      images: "./public/page/homepage/soama.JPG"
+    },
+    {
+      thumb: "./public/page/coursepage/images18.jpg",
+      title: "Introduction to Redis: Caching and In-Memory Data",
+      name: "Boeun Soama",
+      role: "Database Engineer",
+      students: "46+ Student",
+      images: "./public/page/homepage/soama.JPG"
+    },
+    {
+      thumb: "./public/page/coursepage/images19.png",
+      title: "Database Security and Access Control",
+      name: "Boeun Soama",
+      role: "Database Administrator",
+      students: "34+ Student",
+      images: "./public/page/homepage/soama.JPG"
+    },
+    {
+      thumb: "./public/page/coursepage/images20.jpg",
+      title: "Backup, Recovery and High Availability Strategies",
+      name: "Boeun Soama",
+      role: "Database Administrator",
+      students: "29+ Student",
+      images: "./public/page/homepage/soama.JPG"
+    },
+    {
+      thumb: "./public/page/coursepage/images21.jpg",
+      title: "Working with Graph Databases: Neo4j Essentials",
+      name: "Boeun Soama",
+      role: "Database Engineer",
+      students: "40+ Student",
+      images: "./public/page/homepage/soama.JPG"
+    },
+  ],
+  analytics: [
+    {
+      thumb: "./public/page/coursepage/images22.jpg",
+      title: "Excel for Data Analysis: From Basics to Pivot Tables",
+      name: "Loeun Vandeth",
+      role: "Data Analyst",
+      students: "150+ Student",
+      images: "./public/page/homepage/vandeth.png"
+    },
+    {
+      thumb: "./public/page/coursepage/images23.jpg",
+      title: "Data Analytics with Power BI: Building Dashboards",
+      name: "Loeun Vandeth",
+      role: "BI Analyst",
+      students: "98+ Student",
+      images: "./public/page/homepage/vandeth.png"
+    },
+    {
+      thumb: "./public/page/coursepage/images24.jpg",
+      title: "Tableau Fundamentals: Visualizing Data Stories",
+      name: "Loeun Vandeth",
+      role: "Data Visualization Specialist",
+      students: "86+ Student",
+      images: "./public/page/homepage/vandeth.png"
+    },
+    {
+      thumb: "./public/page/coursepage/images25.jpg",
+      title: "Google Analytics for Marketing Decisions",
+      name: "Loeun Vandeth",
+      role: "Digital Analyst",
+      students: "67+ Student",
+      images: "./public/page/homepage/vandeth.png"
+    },
+    {
+      thumb: "./public/page/coursepage/images26.jpg",
+      title: "Statistical Analysis for Business Decisions",
+      name: "Loeun Vandeth",
+      role: "Business Analyst",
+      students: "52+ Student",
+      images: "./public/page/homepage/vandeth.png"
+    },
+    {
+      thumb: "./public/page/coursepage/images27.jpg",
+      title: "Introduction to KPIs and Business Dashboards",
+      name: "Loeun Vandeth",
+      role: "Analytics Consultant",
+      students: "44+ Student",
+      images: "./public/page/homepage/vandeth.png"
+    },
+    {
+      thumb: "./public/page/coursepage/images28.jpg",
+      title: "Customer Analytics: Understanding User Behavior",
+      name: "Loeun Vandeth",
+      role: "Product Analyst",
+      students: "58+ Student",
+      images: "./public/page/homepage/vandeth.png"
+    },
+    {
+      thumb: "./public/page/coursepage/images29.jpg",
+      title: "Forecasting and Trend Analysis for Analysts",
+      name: "Loeun Vandeth",
+      role: "Data Analyst",
+      students: "39+ Student",
+      images: "./public/page/homepage/vandeth.png"
+    },
+    {
+      thumb: "./public/page/coursepage/images30.jpg",
+      title: "Data Cleaning and Preparation Techniques",
+      name: "Loeun Vandeth",
+      role: "Data Analyst",
+      students: "61+ Student",
+      images: "./public/page/homepage/vandeth.png"
+    },
+    {
+      thumb: "./public/page/coursepage/images31.jpg",
+      title: "Reporting Automation with Python and Pandas",
+      name: "Loeun Vandeth",
+      role: "Analytics Engineer",
+      students: "73+ Student",
+      images: "./public/page/homepage/vandeth.png"
+    },
+  ],
+  devops: [
+    {
+      thumb: "./public/page/coursepage/images1.jpg",
+      title: "DevOps Fundamentals: Culture, Practices and Tools",
+      name: "Boeun Soama",
+      role: "DevOps Engineer",
+      students: "88+ Student",
+      images: "./public/page/homepage/soama.JPG"
+    },
+    {
+      thumb: "./public/page/coursepage/images3.png",
+      title: "Docker Essentials: Containerizing Applications",
+      name: "Boeun Soama",
+      role: "DevOps Engineer",
+      students: "112+ Student",
+      images: "./public/page/homepage/soama.JPG"
+    },
+    {
+      thumb: "./public/page/coursepage/images4.jpg",
+      title: "Kubernetes for Beginners: Orchestrating Containers",
+      name: "Boeun Soama",
+      role: "Platform Engineer",
+      students: "94+ Student",
+      images: "./public/page/homepage/soama.JPG"
+    },
+    {
+      thumb: "./public/page/coursepage/image5.png",
+      title: "CI/CD Pipelines with GitHub Actions",
+      name: "Boeun Soama",
+      role: "DevOps Engineer",
+      students: "70+ Student",
+      images: "./public/page/homepage/soama.JPG"
+    },
+    {
+      thumb: "./public/page/coursepage/images6.png",
+      title: "Infrastructure as Code with Terraform",
+      name: "Boeun Soama",
+      role: "Cloud Engineer",
+      students: "56+ Student",
+      images: "./public/page/homepage/soama.JPG"
+    },
+    {
+      thumb: "./public/page/coursepage/images7.jpg",
+      title: "Monitoring and Observability with Prometheus and Grafana",
+      name: "Boeun Soama",
+      role: "Site Reliability Engineer",
+      students: "43+ Student",
+      images: "./public/page/homepage/soama.JPG"
+    },
+    {
+      thumb: "./public/page/coursepage/images8.jpg",
+      title: "Linux System Administration for DevOps",
+      name: "Boeun Soama",
+      role: "Systems Administrator",
+      students: "65+ Student",
+      images: "./public/page/homepage/soama.JPG"
+    },
+    {
+      thumb: "./public/page/coursepage/images9.jpg",
+      title: "Configuration Management with Ansible",
+      name: "Boeun Soama",
+      role: "DevOps Engineer",
+      students: "38+ Student",
+      images: "./public/page/homepage/soama.JPG"
+    },
+    {
+      thumb: "./public/page/coursepage/images10.jpg",
+      title: "Cloud Cost Optimization Strategies",
+      name: "Boeun Soama",
+      role: "Cloud Engineer",
+      students: "31+ Student",
+      images: "./public/page/homepage/soama.JPG"
+    },
+    {
+      thumb: "./public/page/coursepage/images11.jpg",
+      title: "Building a Zero-Downtime Deployment Pipeline",
+      name: "Boeun Soama",
+      role: "DevOps Engineer",
+      students: "49+ Student",
+      images: "./public/page/homepage/soama.JPG"
+    },
+  ],
+  mobile: [
+    {
+      thumb: "./public/page/coursepage/images12.jpg",
+      title: "iOS App Development with SwiftUI",
+      name: "Boeun Soama",
+      role: "iOS Developer",
+      students: "82+ Student",
+      images: "./public/page/homepage/soama.JPG"
+    },
+    {
+      thumb: "./public/page/coursepage/images13.jpg",
+      title: "Android Development with Kotlin: From Zero to App",
+      name: "Boeun Soama",
+      role: "Android Developer",
+      students: "97+ Student",
+      images: "./public/page/homepage/soama.JPG"
+    },
+    {
+      thumb: "./public/page/coursepage/image14.jpg",
+      title: "Cross-Platform Apps with Flutter",
+      name: "Boeun Soama",
+      role: "Mobile Developer",
+      students: "104+ Student",
+      images: "./public/page/homepage/soama.JPG"
+    },
+    {
+      thumb: "./public/page/coursepage/images15.jpg",
+      title: "React Native for Web Developers",
+      name: "Boeun Soama",
+      role: "Mobile Developer",
+      students: "78+ Student",
+      images: "./public/page/homepage/soama.JPG"
+    },
+    {
+      thumb: "./public/page/coursepage/images16.jpg",
+      title: "Mobile UI/UX Design Principles",
+      name: "Boeun Soama",
+      role: "Mobile Designer",
+      students: "45+ Student",
+      images: "./public/page/homepage/soama.JPG"
+    },
+    {
+      thumb: "./public/page/coursepage/images17.jpg",
+      title: "App Store Optimization and Launch Strategy",
+      name: "Boeun Soama",
+      role: "Mobile Growth Manager",
+      students: "36+ Student",
+      images: "./public/page/homepage/soama.JPG"
+    },
+    {
+      thumb: "./public/page/coursepage/images18.jpg",
+      title: "Building Offline-First Mobile Apps",
+      name: "Boeun Soama",
+      role: "Mobile Developer",
+      students: "29+ Student",
+      images: "./public/page/homepage/soama.JPG"
+    },
+    {
+      thumb: "./public/page/coursepage/images19.png",
+      title: "Push Notifications and Deep Linking Explained",
+      name: "Boeun Soama",
+      role: "Mobile Developer",
+      students: "33+ Student",
+      images: "./public/page/homepage/soama.JPG"
+    },
+    {
+      thumb: "./public/page/coursepage/images20.jpg",
+      title: "Mobile App Testing and Debugging",
+      name: "Boeun Soama",
+      role: "QA Engineer",
+      students: "41+ Student",
+      images: "./public/page/homepage/soama.JPG"
+    },
+    {
+      thumb: "./public/page/coursepage/images21.jpg",
+      title: "Monetization Strategies for Mobile Apps",
+      name: "Boeun Soama",
+      role: "Mobile Product Manager",
+      students: "54+ Student",
+      images: "./public/page/homepage/soama.JPG"
+    },
+  ],
+  security: [
+    {
+      thumb: "./public/page/coursepage/images22.jpg",
+      title: "Cybersecurity Fundamentals: Protecting Digital Assets",
+      name: "Boeun Soama",
+      role: "Security Analyst",
+      students: "119+ Student",
+      images: "./public/page/homepage/soama.JPG"
+    },
+    {
+      thumb: "./public/page/coursepage/images23.jpg",
+      title: "Ethical Hacking 101: Thinking Like an Attacker",
+      name: "Boeun Soama",
+      role: "Penetration Tester",
+      students: "142+ Student",
+      images: "./public/page/homepage/soama.JPG"
+    },
+    {
+      thumb: "./public/page/coursepage/images24.jpg",
+      title: "Network Security Essentials",
+      name: "Boeun Soama",
+      role: "Security Engineer",
+      students: "68+ Student",
+      images: "./public/page/homepage/soama.JPG"
+    },
+    {
+      thumb: "./public/page/coursepage/images25.jpg",
+      title: "Web Application Security: Finding and Fixing Vulnerabilities",
+      name: "Boeun Soama",
+      role: "AppSec Engineer",
+      students: "77+ Student",
+      images: "./public/page/homepage/soama.JPG"
+    },
+    {
+      thumb: "./public/page/coursepage/images26.jpg",
+      title: "Cloud Security Best Practices",
+      name: "Boeun Soama",
+      role: "Cloud Security Engineer",
+      students: "51+ Student",
+      images: "./public/page/homepage/soama.JPG"
+    },
+    {
+      thumb: "./public/page/coursepage/images27.jpg",
+      title: "Incident Response and Threat Detection",
+      name: "Boeun Soama",
+      role: "SOC Analyst",
+      students: "40+ Student",
+      images: "./public/page/homepage/soama.JPG"
+    },
+    {
+      thumb: "./public/page/coursepage/images28.jpg",
+      title: "Cryptography Basics for Developers",
+      name: "Boeun Soama",
+      role: "Security Engineer",
+      students: "35+ Student",
+      images: "./public/page/homepage/soama.JPG"
+    },
+    {
+      thumb: "./public/page/coursepage/images29.jpg",
+      title: "Identity and Access Management Explained",
+      name: "Boeun Soama",
+      role: "Security Architect",
+      students: "28+ Student",
+      images: "./public/page/homepage/soama.JPG"
+    },
+    {
+      thumb: "./public/page/coursepage/images30.jpg",
+      title: "Security Compliance and Risk Management",
+      name: "Boeun Soama",
+      role: "Compliance Analyst",
+      students: "24+ Student",
+      images: "./public/page/homepage/soama.JPG"
+    },
+    {
+      thumb: "./public/page/coursepage/images31.jpg",
+      title: "Social Engineering and Phishing Defense",
+      name: "Boeun Soama",
+      role: "Security Awareness Trainer",
+      students: "47+ Student",
+      images: "./public/page/homepage/soama.JPG"
     },
   ],
 };
@@ -372,15 +1024,23 @@ function renderCourseCards(list) {
   });
 }
 
-// Searches title, instructor name, instructor role, and category for the query text
+// Searches title, instructor name, instructor role, and category for the query text.
+// Matches on word boundaries (e.g. "AI" matches "AI Researcher") instead of raw
+// substring matching, so it won't false-positive on words that merely contain the
+// query letters, like "Email" or "Explained" containing "ai".
 function searchCourses(query) {
   const q = query.trim().toLowerCase();
   if (!q) return getAllCourses();
+
+  // Escape regex special characters in the user's input, then match at a word start
+  const escaped = q.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  const pattern = new RegExp(`\\b${escaped}`, "i");
+
   return getAllCourses().filter((c) =>
-    c.title.toLowerCase().includes(q) ||
-    c.name.toLowerCase().includes(q) ||
-    c.role.toLowerCase().includes(q) ||
-    c.cat.toLowerCase().includes(q)
+    pattern.test(c.title) ||
+    pattern.test(c.name) ||
+    pattern.test(c.role) ||
+    pattern.test(c.cat)
   );
 }
 
